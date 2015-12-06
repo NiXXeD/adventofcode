@@ -1,2 +1,1 @@
-console.log(require('fs').readFileSync('input', 'utf-8').split('\n')
-    .filter(s => !/ab|cd|pq|xy/.test(s) && (s.match(/[aeiou]/g) || []).length > 2 && /(.)\1+/.test(s)).length)
+module.exports = input => input.filter(s => !/ab|cd|pq|xy/.test(s) && (s.match(/[aeiou]/g) || []).length > 2 && /(.)\1+/.test(s)).length
