@@ -3,13 +3,7 @@ var grid = require('fs').readFileSync('input-day6', 'utf-8').trimRight().split('
     .reduce((g, a) => {
         for (var x = +a[2]; x <= +a[4]; x++) {
             for (var y = +a[3]; y <= +a[5]; y++) {
-                if (a[1] === 'turn on') {
-                    g[`${x},${y}`] = 1
-                } else if (a[1] === 'turn off') {
-                    g[`${x},${y}`] = 0
-                } else if (a[1] === 'toggle') {
-                    g[`${x},${y}`] = +!g[`${x},${y}`]
-                }
+                g[`${x},${y}`] = a[1] === 'toggle' ? +!g[`${x},${y}`] : +(a[1] === 'turn on')
             }
         }
         return g
