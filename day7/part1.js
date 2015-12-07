@@ -2,7 +2,7 @@ module.exports = (input, wires={}) => {
     var test = i => !i || wires.hasOwnProperty(i) || /\d+/.test(i)
     var val = i => wires[i] || +i
     var ops = {AND: (a, b) => a & b, OR: (a, b) => a | b, LSHIFT: (a, b) => a << b,
-        RSHIFT: (a, b) => a >> b, NOT: (a, b) => ~b, VAL: (a, b) => b}
+        RSHIFT: (a, b) => a >> b, NOT: (a, b) => b ^ 65535, VAL: (a, b) => b}
 
     while (input.length) {
         var [o, a, op, b, c] = input.shift().match(/([a-z0-9]*)\b\s?([A-Z]+)?\s?(\S+)\s->\s(\S+)/)
