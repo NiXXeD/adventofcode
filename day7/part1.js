@@ -1,28 +1,14 @@
-module.exports = (input, wires) => {
-    wires = wires || {}
-    var test = i => wires.hasOwnProperty(i) || /\d+/.test(i)
+module.exports = (input, wires={}) => {
+    var test = i => !i || wires.hasOwnProperty(i) || /\d+/.test(i)
     var val = i => wires[i] || +i
+    var ops = {AND: (a, b) => a & b, OR: (a, b) => a | b, LSHIFT: (a, b) => a << b,
+        RSHIFT: (a, b) => a >> b, NOT: (a, b) => ~(b >>> 0), VAL: (a, b) => b}
 
     while (input.length) {
-        var i = input.shift()
-        var m = i.match(/^(\w+)\s?(\w+)?\s?(\w+)?\s->\s(\w+)$/)
-        if (!test(m[4])) {
-            if (m[2] === 'AND' && test(m[1]) && test(m[3])) {
-                wires[m[4]] = val(m[1]) & val(m[3])
-            } else if (m[2] === 'OR' && test(m[1]) && test(m[3])) {
-                wires[m[4]] = val(m[1]) | val(m[3])
-            } else if (m[2] === 'LSHIFT' && test(m[1])) {
-                wires[m[4]] = val(m[1]) << val(m[3])
-            } else if (m[2] === 'RSHIFT' && test(m[1])) {
-                wires[m[4]] = val(m[1]) >> val(m[3])
-            } else if (m[1] === 'NOT' && test(m[2])) {
-                wires[m[4]] = ~(val(m[2]) >>> 0)
-            } else if (!m[2] && test(m[1])) {
-                wires[m[4]] = val(m[1])
-            } else {
-                input.push(i)
-            }
-        }
+        var [o, a, op, b, c] = input.shift().match(/([a-z0-9]*)\b\s?([A-Z]+)?\s?(\S+)\s->\s(\S+)/)
+        if (!test(c))
+            if (test(a) && test(b)) wires[c] = ops[op || 'VAL'](val(a), val(b))
+            else input.push(o)
     }
 
     return wires.a
