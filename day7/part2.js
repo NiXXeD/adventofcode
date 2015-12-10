@@ -1,1 +1,1 @@
-module.exports = input => require('./part1')(input, {b: require('./part1')(input.slice(0))})
+module.exports = i => require('./part1')(i, {b: require('./part1')(i.slice(0))})

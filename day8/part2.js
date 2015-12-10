@@ -1,1 +1,1 @@
-module.exports = input => input.map(s => s.replace(/\\|"/g, 'aa') + 'aa').join('').length - input.join('').length
+module.exports=i=>i.map(s =>s.replace(/\\|"/g,'aa')+'aa').join``.length-i.join``.length

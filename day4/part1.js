@@ -1,1 +1,1 @@
-module.exports = input => {for(x=1;!require('md5')(input+x++).startsWith('00000'););return x}
+module.exports=i=>{for(var x=0;!require('md5')(i+x++).startsWith('00000'););return x}

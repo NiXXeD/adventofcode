@@ -1,1 +1,1 @@
-module.exports = i => require('./part1')(i, 'max')
+module.exports=i=>require('./part1')(i,'max')
