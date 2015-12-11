@@ -8,12 +8,21 @@
   "version": "1.0.0",
   "author": "Andy Christianson",
   "license": "ISC",
+  "scripts": {
+    "start": "babel-node index",
+    "test": "mocha test.js --compilers js:mocha-babel --timeout 30000"
+  },
   "dependencies": {
+    "babel": "^6.3.13",
+    "babel-cli": "^6.3.17",
     "babel-preset-es2015": "^6.1.18",
+    "babel-runtime": "^6.3.13",
     "bluebird": "^3.0.5",
     "js-combinatorics": "^0.5.0",
     "lodash": "^3.10.1",
     "md5": "^2.0.0",
+    "mocha": "^2.3.4",
+    "mocha-babel": "^3.0.0",
     "moment": "^2.10.6"
   }
 }

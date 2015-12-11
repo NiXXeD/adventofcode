@@ -6,15 +6,19 @@ No, I don't code like this at work.
 
 Note, for some of the solutions I'm using babel for some additional ES6 features not natively in Node 4.x yet.
 
-To run
+To run one day/part
 ------
-`babel-node runner <day#> <part#>`
+`npm start <day#> <part#>`
 
 Example
 -------
 ```
-babel-node runner 6 1
-Running...
-Answer: 543903
-Run time: 00:10:2550
+npm start 6 1
+6.1 running...
+6.1 answer:	   543903
+6.1 time:	   00:09:7400
 ```
+
+To test all days
+-----------
+`npm run test`
