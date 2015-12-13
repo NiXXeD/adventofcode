@@ -1,27 +1,10 @@
-var _ = require('lodash')
-
 module.exports = i => {
-    var stuff = i.map(s => s.match(/^(\w+).+?(\w+)\s(\d+).+?(\w+).$/))
-
-    var people = _.uniq(stuff.map(s => s[1]))
-
-    stuff = stuff.reduce((r, v) => {
+    i = i.map(s => s.match(/^(\w+).+?(\w+)\s(\d+).+?(\w+).$/)).reduce((r, v) => {
+        r.keys[v[1]] = 1
         r[`${v[1]},${v[4]}`] = v[2] === 'lose' ? 0 - +v[3] : +v[3]
         return r
-    }, {})
-
-    _.each(people, p => stuff[`Me,${p}`] = stuff[`${p},Me`] = 0)
-    people.push('Me')
-
-    var permutations = require('js-combinatorics').permutation(people).map(p => p.map(s => ({name: s})))
-
-    return _.max(permutations.map(a => {
-        return a.map((p, k, a) => {
-            var prev = !k ? a[8] : a[k-1]
-            var next = k === 8 ? a[0] : a[k+1]
-
-            p.happiness = stuff[`${p.name},${prev.name}`] + stuff[`${p.name},${next.name}`]
-            return p
-        }).reduce((r, v) => r + v.happiness, 0)
-    }))
+    }, {keys: {Me: 1}})
+    return require('js-combinatorics').permutation(Object.keys(i.keys)).map(a =>
+        a.map((p, k, a) => (i[`${p},${a[k - 1] || a[a.length - 1]}`] || 0) + (i[`${p},${a[k + 1] || a[0]}`] || 0))
+            .reduce((r, v) => r + v, 0)).reduce((r, v) => r > v ? r : v, 0)
 }
