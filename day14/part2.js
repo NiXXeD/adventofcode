@@ -1,6 +1,6 @@
 module.exports = input => {
-    var r = input.map(s => s.match(/.+?(\d+).+?(\d+).+?(\d+)/)).map(m => ({
-        speed: +m[1], flyTime: +m[2], restTime: +m[3], distance: 0, remaining: +m[2], points: 0
+    var r = input.map(s => s.match(/(\d+)/g)).map(m => ({
+        speed: +m[0], flyTime: +m[1], restTime: +m[2], distance: 0, remaining: +m[1], points: 0
     }))
 
     for (var d = 0; d < 2503; d++) {
