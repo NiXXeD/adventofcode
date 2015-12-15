@@ -1,17 +1,14 @@
 module.exports = input => {
-    var r = input.map(s => s.match(/(\d+)/g)).map(m => ({
-        speed: +m[0], flyTime: +m[1], restTime: +m[2], distance: 0, remaining: +m[1]
-    }))
-
-    for (var d = 0; d < 2503; d++) {
+    return [...Array(2503)].reduce(r => {
         r.forEach(e => {
-            if (e.mode !== 'r') e.distance += e.speed
+            if (!e.rest) e.distance += e.speed
             if (!--e.remaining) {
-                e.mode = e.mode !== 'r' ? 'r' : 'f'
-                e.remaining = e.mode === 'f' ? e.flyTime : e.restTime
+                e.rest = !e.rest
+                e.remaining = e.rest ? e.restTime : e.flyTime
             }
         })
-    }
-
-    return r.reduce((r, v) => r > v.distance ? r : v.distance, 0)
+        return r
+    }, input.map(s => s.match(/(\d+)/g)).map(m => ({
+        speed: +m[0], flyTime: +m[1], restTime: +m[2], distance: 0, remaining: +m[1]
+    }))).reduce((r, v) => r > v.distance ? r : v.distance, 0)
 }
