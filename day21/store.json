@@ -1,0 +1,27 @@
+{
+  "weapons": [
+    {"cost": 8, "dmg": 4},
+    {"cost": 10, "dmg": 5},
+    {"cost": 25, "dmg": 6},
+    {"cost": 40, "dmg": 7},
+    {"cost": 74, "dmg": 8}
+  ],
+  "armor": [
+    {"cost": 0, "ar": 0},
+    {"cost": 13, "ar": 1},
+    {"cost": 31, "ar": 2},
+    {"cost": 53, "ar": 3},
+    {"cost": 75, "ar": 4},
+    {"cost": 102, "ar": 5}
+  ],
+  "rings": [
+    {"id": 1, "cost": 0, "ar": 0, "dmg": 0},
+    {"id": 2, "cost": 0, "ar": 0, "dmg": 0},
+    {"id": 3, "cost": 25, "ar": 0, "dmg": 1},
+    {"id": 4, "cost": 50, "ar": 0, "dmg": 2},
+    {"id": 5, "cost": 100, "ar": 0, "dmg": 3},
+    {"id": 6, "cost": 20, "ar": 1, "dmg": 0},
+    {"id": 7, "cost": 40, "ar": 2, "dmg": 0},
+    {"id": 8, "cost": 80, "ar": 3, "dmg": 0}
+  ]
+}
