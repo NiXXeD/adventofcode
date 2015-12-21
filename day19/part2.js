@@ -1,20 +1,18 @@
 module.exports = input => {
-    var original = require('fs').readFileSync('./day19/start', 'utf8').trimRight()
+    var val = require('fs').readFileSync('./day19/start', 'utf8').trimRight()
 
-    var swap = input.map(a => a.match(/(.+)\s=>\s(.+)/))
-        .map(a => ({k: a[1], v: a[2]}))
+    var count = (r, v) => r + (val.match(new RegExp(v, 'g')) || []).length
+    var special = ['Rn', 'Ar', 'Y']
+    var elements = Array.from(input.map(a => a.match(/(.+)\s=>\s(.+)/)[1])
+        .concat(special)
+        .reduce((r, v) => r.add(v), new Set()))
+        .reduce(count, 0)
 
-    let steps = 0
-    var val = original
-    while (val.length > 1) {
-        for (let i = 0; i < swap.length; i++) {
-            let e = swap[i]
-            if (val.includes(e.v)) {
-                val = val.replace(e.v, e.k)
-                steps++
-            }
-        }
-    }
+    var parens = special.slice(0, 2)
+        .reduce(count, 0)
 
-    return steps
+    var commas = special.slice(2)
+        .reduce(count, 0)
+
+    return elements - parens - commas * 2 - 1
 }
