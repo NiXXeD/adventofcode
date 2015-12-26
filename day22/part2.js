@@ -78,5 +78,5 @@ module.exports = input => {
         turns++
     }
 
-    return {win: boss.hp < 1, spent}
+    return spent
 }
