@@ -1,1 +1,1 @@
-module.exports = input => require('./part1')(input, 4)
+module.exports = i => require('./part1')(i, 4)
