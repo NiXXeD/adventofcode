@@ -19,6 +19,12 @@ module.exports = input => {
             player.recharge--
             player.mana += 101
         }
+        
+        var cast = (spell, cost) => {
+            console.log(spell, player, boss)
+            spent += cost
+            player.mana -= cost
+        }
 
         if (turns % 2) {
             if (boss.hp > 0) {
@@ -29,29 +35,17 @@ module.exports = input => {
         } else {
             //player turn
             if (!boss.poison && player.mana >= 173 && boss.hp > 18) {
-                console.log('Poison', player, boss)
-
-                spent += 173
-                player.mana -= 173
+                cast('Poison', 173)
                 boss.poison = 6
             } else if (!player.hasOwnProperty('recharge')) {
-                console.log('Recharge', player, boss)
-
-                spent += 229
-                player.mana -= 229
+                cast('Recharge', 229)
                 player.recharge = 5
             } else if (!player.hasOwnProperty('shield')) {
-                console.log('Shield', player, boss)
-
-                spent += 113
-                player.mana -= 113
+                cast('Shield', 113)
                 player.ar = 7
                 player.shield = 6
             } else if (player.mana >= 53) {
-                console.log('Missile', player, boss)
-
-                spent += 53
-                player.mana -= 53
+                cast('Missile', 53)
                 boss.hp -= 4
             }
         }
