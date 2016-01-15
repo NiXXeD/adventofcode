@@ -1,6 +1,5 @@
 module.exports = i => {
-    var _ = require('lodash')
-    var t = 0
+    var _ = require('lodash'), t = 0
     return (function p(x) {
         if (_.isArray(x)) _.each(x, p)
         else if (_.isObject(x)) _.forIn(x, p)
