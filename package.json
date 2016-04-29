@@ -1,6 +1,6 @@
 {
   "name": "adventofcode",
-  "description": "Solving adventofcode.com puzzles.",
+  "description": "Solving adventofcode.com puzzles with NodeJS and ES6.",
   "repository": {
     "type": "git",
     "url": "https://github.com/NiXXeD/adventofcode"
@@ -9,17 +9,17 @@
   "author": "Andy Christianson",
   "license": "ISC",
   "scripts": {
-    "start": "babel-node index",
-    "test": "mocha test.js --compilers js:babel-register --timeout 30000"
+    "start": "node index",
+    "test": "mocha test.js --timeout 30000"
+  },
+  "engines": {
+    "node": ">=6.0.0"
   },
   "dependencies": {
-    "babel-core": "^6.3.17",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-register": "^6.3.13",
-    "js-combinatorics": "^0.5.0",
-    "lodash": "^3.10.1",
-    "md5": "^2.0.0",
-    "mocha": "^2.3.4",
-    "moment": "^2.10.6"
+    "js-combinatorics": "0.5.0",
+    "lodash": "4.11.1",
+    "md5": "2.0.0",
+    "mocha": "2.3.4",
+    "moment": "2.10.6"
   }
 }
