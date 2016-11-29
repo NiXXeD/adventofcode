@@ -1,1 +1,1 @@
-require('./run')(process.argv[2], process.argv[3])
+require('./run')(process.argv[2], process.argv[3], process.argv[4])

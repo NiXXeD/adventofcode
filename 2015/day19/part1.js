@@ -1,5 +1,5 @@
 module.exports = input => {
-    var start = require('fs').readFileSync('./day19/start', 'utf8').trimRight()
+    var start = require('fs').readFileSync('./2015/day19/start', 'utf8').trimRight()
     var out = new Set()
 
     var swap = input.map(a => a.match(/(.+)\s=>\s(.+)/)).map(a => ({k: a[1], v: a[2]}))

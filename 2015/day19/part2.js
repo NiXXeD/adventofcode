@@ -1,5 +1,5 @@
 module.exports = input => {
-    var val = require('fs').readFileSync('./day19/start', 'utf8').trimRight()
+    var val = require('fs').readFileSync('./2015/day19/start', 'utf8').trimRight()
 
     var count = (r, v) => r + (val.match(new RegExp(v, 'g')) || []).length
     var special = ['Rn', 'Ar', 'Y']

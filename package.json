@@ -10,7 +10,8 @@
   "license": "ISC",
   "scripts": {
     "start": "node index",
-    "test": "mocha test.js --timeout 30000"
+    "test-2015": "mocha 2015/test.js --timeout 30000",
+    "test-2016": "mocha 2016/test.js --timeout 30000"
   },
   "engines": {
     "node": ">=6.0.0"
