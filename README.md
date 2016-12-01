@@ -8,17 +8,17 @@ Using Node v6 for ES6 syntax and features.
 
 To run one day/part
 ------
-`npm start <day#> <part#>`
+`npm start <year#> <day#> <part#>`
 
 Example
 -------
 ```
-npm start 6 1
+npm start 2015 6 1
 6.1 running...
 6.1 answer:	   543903
 6.1 time:	   00:09:7400
 ```
 
-To test all days
+To test all days in a year
 -----------
-`npm run test`
+`npm run 2015-test`
