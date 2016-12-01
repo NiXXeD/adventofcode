@@ -1,32 +1,11 @@
 const _ = require('lodash')
-
-module.exports = input => {
-    let pos = input.split(', ')
-        .map(s => ({dir: s[0] === 'R' ? 1 : -1, steps: +s.slice(1)}))
-        .reduce((p, v) => {
-            p.f = (p.f + v.dir + 4) % 4
-            let xD = {0: 0, 1: 1, 2: 0, 3: -1}[p.f]
-            let yD = {0: 1, 1: 0, 2: -1, 3: 0}[p.f]
-
-            if (!p.answer) {
-                _.range(v.steps)
-                    .forEach(i => {
-                        let x = p.x + (xD * i)
-                        let y = p.y + (yD * i)
-                        let loc = `${x},${y}`
-                        if (p.history[loc]) {
-                            p.answer = {x, y}
-                        } else {
-                            p.history[loc] = true
-                        }
-                    })
-            }
-
-            p.x += {0: 0, 1: 1, 2: 0, 3: -1}[p.f] * v.steps
-            p.y += {0: 1, 1: 0, 2: -1, 3: 0}[p.f] * v.steps
-            return p
-        }, {x: 0, y: 0, f: 0, history: {}, answer: null})
-        .answer
-
-    return Math.abs(pos.x) + Math.abs(pos.y)
-}
+module.exports = i => i.split`, `.map(s => ([{R: i => ([i[1], -i[0]]), L: i => ([-i[1], i[0]])}[s[0]], +s.slice(1)]))
+    .reduce((p, v) => {
+        let n = [v[0](p[0]), p[1] + (v[0](p[0])[0] * v[1]), p[2] + (v[0](p[0])[1] * v[1]), p[3], p[4]]
+        if (!n[4]) _.range(v[1]).forEach(i => {
+            let x = p[1] + (n[0][0] * i), y = p[2] + (n[0][1] * i), loc = `${x},${y}`
+            if (n[3][loc]) n[4] = [x, y]
+            else n[3][loc] = 1
+        })
+        return n
+    }, [[0, 1], 0, 0, {}, null])[4].reduce((p, v) => p + Math.abs(v), 0)
