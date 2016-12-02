@@ -10,4 +10,6 @@ describe('advent of code', () => {
 
     it('day 01, part 1', () => test(1, 1, 161))
     it('day 01, part 2', () => test(1, 2, 110))
+    it('day 02, part 1', () => test(2, 1, 56855))
+    it('day 02, part 2', () => test(2, 2, 'B3C27'))
 })
