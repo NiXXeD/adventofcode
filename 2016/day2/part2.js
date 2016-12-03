@@ -17,8 +17,7 @@ module.exports = input => {
                     else if (v === 'L') n[1] = p[1] - 1
                     else if (v === 'R') n[1] = p[1] + 1
                     if (!keypad[n[0]] || !keypad[n[0]][n[1]]) n = p
-                    prev = n
-                    return n
+                    return prev = n
                 }, prev)
             })
             .map(coords => keypad[coords[0]][coords[1]])
