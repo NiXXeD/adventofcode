@@ -26,4 +26,5 @@ To test all days in a year
 To set up a new day
 ---
 `npm run setup 2016 12`  
-Will create folders/files for `input`, `part1.js`, `part2.js`
+Will create folders/files for `input`, `part1.js`, `part2.js` and entries in 
+the test file for that year.
