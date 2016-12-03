@@ -7,11 +7,11 @@ No, I don't code like this at work.
 Using Node v6 for ES6 syntax and features.
 
 To run one day/part
-------
+---
 `npm start <year#> <day#> <part#>`
 
 Example
--------
+---
 ```
 npm start 2015 6 1
 6.1 running...
@@ -20,5 +20,10 @@ npm start 2015 6 1
 ```
 
 To test all days in a year
------------
+---
 `npm run 2015-test`
+
+To set up a new day
+---
+`npm run setup 2016 12`  
+Will create folders/files for `input`, `part1.js`, `part2.js`
