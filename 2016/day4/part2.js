@@ -1,4 +1,5 @@
 const _ = require('lodash')
+const alpha = 'abcdefghijklmnopqrstuvwxyz'
 module.exports = input => {
     return input
         .map(s => s.match(/(.+?)-(\d+)\[(.+?)]/))
@@ -18,12 +19,8 @@ module.exports = input => {
                 .value()
         }))
         .filter(v => v.checksum.split``.every(l => v.chars.includes(l)))
-        .map(v => {
-            let alpha = 'abcdefghijklmnopqrstuvwxyz'.split``
-            v.realname = v.name.split``.map(l => {
-                return (l === '-') ? ' ' : alpha[(_.indexOf(alpha, l) + v.sector) % 26]
-            }).join``
-            return v
-        })
-        .filter(v => _.includes(v.realname, 'northpole object storage'))[0].sector
+        .map(v => _.merge(v, {
+            real: v.name.split``.map(l => (l === '-') ? ' ' : alpha[(_.indexOf(alpha, l) + v.sector) % 26]).join``
+        }))
+        .find(v => v.real === 'northpole object storage').sector
 }
