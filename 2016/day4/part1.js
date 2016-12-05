@@ -3,9 +3,8 @@ module.exports = input => {
     return input
         .map(s => s.match(/(.+?)-(\d+)\[(.+?)]/))
         .map(v => ({
-            name: v[1],
             sector: +v[2],
-            checksum: v[3],
+            checksum: v[3].split``,
             chars: _(_.countBy(v[1].replace(/-/g, '').split``))
                 .map((n, c) => ({c, n}))
                 .orderBy(['n', 'c'], ['desc', 'asc'])
@@ -13,6 +12,6 @@ module.exports = input => {
                 .map('c')
                 .value()
         }))
-        .filter(v => v.checksum.split``.every(l => v.chars.includes(l)))
+        .filter(v => v.checksum.every(l => v.chars.includes(l)))
         .reduce((p, v) => p + v.sector, 0)
 }
