@@ -5,33 +5,28 @@ module.exports = input => {
         .map(v => ({
             name: v[1],
             sector: +v[2],
-            checksum: v[3]
+            checksum: v[3],
+            chars: _(v[1].replace(/-/g, '').split``
+                .reduce((p, v) => {
+                    let b = _.find(p, {l: v}) || (p.push({l: v, c: 1}))
+                    b.c++
+                    return p
+                }, []))
+                .sortBy('l')
+                .reverse()
+                .sortBy('c')
+                .reverse()
+                .take(5)
+                .map('l')
+                .value()
         }))
-        .map(v => {
-            v.chars = blah(v.name)
-            v.chars = _.map(_.take(_.sortBy(_.sortBy(v.chars, 'l').reverse(), 'c').reverse(), 5), 'l')
-            return v
-        })
         .filter(v => v.checksum.split``.every(l => v.chars.includes(l)))
         .map(v => {
             let alpha = 'abcdefghijklmnopqrstuvwxyz'.split``
             v.realname = v.name.split``.map(l => {
-                if (l === '-') {
-                    return ' '
-                } else {
-                    let index = (_.indexOf(alpha, l) + v.sector) % 26
-                    return alpha[index]
-                }
+                return (l === '-') ? ' ' : alpha[(_.indexOf(alpha, l) + v.sector) % 26]
             }).join``
             return v
         })
-        .filter(v => _.includes(v.realname, 'north'))[0].sector
-
-    function blah(s) {
-        return s.replace(/-/g, '').split``.reduce((p, v) => {
-            let b = _.find(p, {l: v}) || (p.push({l: v, c: 1}))
-            b.c++
-            return p
-        }, [])
-    }
+        .filter(v => _.includes(v.realname, 'northpole object storage'))[0].sector
 }
