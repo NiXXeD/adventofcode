@@ -12,10 +12,7 @@ module.exports = input => {
                     b.c++
                     return p
                 }, []))
-                .sortBy('l')
-                .reverse()
-                .sortBy('c')
-                .reverse()
+                .orderBy(['c', 'l'], ['desc', 'asc'])
                 .take(5)
                 .map('l')
                 .value()
