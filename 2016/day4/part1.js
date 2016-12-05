@@ -6,15 +6,11 @@ module.exports = input => {
             name: v[1],
             sector: +v[2],
             checksum: v[3],
-            chars: _(v[1].replace(/-/g, '').split``
-                .reduce((p, v) => {
-                    let b = _.find(p, {l: v}) || (p.push({l: v, c: 1}))
-                    b.c++
-                    return p
-                }, []))
-                .orderBy(['c', 'l'], ['desc', 'asc'])
+            chars: _(_.countBy(v[1].replace(/-/g, '').split``))
+                .map((n, c) => ({c, n}))
+                .orderBy(['n', 'c'], ['desc', 'asc'])
                 .take(5)
-                .map('l')
+                .map('c')
                 .value()
         }))
         .filter(v => v.checksum.split``.every(l => v.chars.includes(l)))
