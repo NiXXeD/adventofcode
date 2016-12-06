@@ -1,10 +1,4 @@
 const _ = require('lodash')
-module.exports = input => {
-    return _(input.reduce((p, v) => v.split``.forEach((c, i) => p[i] += c) || p, ['','','','','','','','']))
-        .map(v => _.countBy(v))
-        .map(o => _.map(o, (v, k) => ({v, k})))
-        .map(a => _.maxBy(a, 'v'))
-        .map('k')
-        .value()
-        .join``
-}
+module.exports = i => _.zip(...i.map(v => v.split``))
+    .map(v => _(_.countBy(v)).map((v, x) => ({v, x})).maxBy('v'))
+    .map(v => v.x).join``
