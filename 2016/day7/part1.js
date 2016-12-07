@@ -1,1 +1,1 @@
-module.exports = i => i.filter(line => /([^[])([^[])\2\1/g.test(line) && /\[.*?(.)(.)\2\1.*?]/.test(line)).length
+module.exports = i => i.filter(l => /([^[])([^[])\2\1/g.test(l) && /\[.*?(.)(.)\2\1.*?]/.test(l)).length
