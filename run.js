@@ -8,6 +8,6 @@ module.exports = function run(year, day, part) {
     let answer = require(`./${year}/day${day}/part${part}`)(input.length === 1 ? input[0] : input)
     console.log(`${year}.${day}.${part} answer:\t`, answer)
     let endTime = moment()
-    console.log(`${year}.${day}.${part} time:\t`, moment(endTime.diff(startTime)).format('mm:ss:SSSS'))
+    console.log(`${year}.${day}.${part} time:\t\t`, moment(endTime.diff(startTime)).format('mm:ss:SSSS'))
     return answer
 }
