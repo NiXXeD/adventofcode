@@ -1,52 +1,50 @@
-const _ = require('lodash')
-
-module.exports = input => {
+module.exports = (input, part = 1) => {
     let output = {}
-    let values = _(input).filter(v => /^va/.test(v))
-        .map(s => s.match(/(\d+)/g))
-        .map(m => ({
-            value: +m[0],
-            bot: +m[1]
-        }))
-        .value()
 
-    let bots = _(input).filter(v => /^bo/.test(v))
-        .map(s => s.match(/(\d+).*?(output|bot) (\d+).*?(output|bot) (\d+)/))
-        .map(m => ({
-            bot: +m[1],
+    let bots = input
+        .filter(value => /^bo/.test(value))
+        .map(str => str.match(/(\d+).*?(output|bot) (\d+).*?(output|bot) (\d+)/))
+        .map(matches => ({
+            bot: +matches[1],
             low: {
-                dest: m[2],
-                value: +m[3]
+                dest: matches[2],
+                value: +matches[3]
             },
             high: {
-                dest: m[4],
-                value: +m[5]
+                dest: matches[4],
+                value: +matches[5]
             },
             data: []
         }))
-        .sortBy('bot')
-        .map(b => {
-            b.f = input => {
-                b.data.push(input)
+        .map(bot => Object.assign(bot, {
+            process(input) {
+                bot.data.push(input)
 
-                if (b.data.length == 2) {
-                    let low = _.min(b.data)
-                    let high = _.max(b.data)
+                if (bot.data.length == 2) {
+                    let low = Math.min(...bot.data)
+                    let high = Math.max(...bot.data)
 
-                    b.low.real = low
-                    b.high.real = high
-                    b.low.dest === 'output' ? output[b.low.value] = low : bots[b.low.value].f(low)
-                    b.high.dest === 'output' ? output[b.high.value] = high : bots[b.high.value].f(high)
+                    bot.low.chip = low
+                    bot.high.chip = high
+                    bot.low.dest === 'output' ? output[bot.low.value] = low : bots[bot.low.value].process(low)
+                    bot.high.dest === 'output' ? output[bot.high.value] = high : bots[bot.high.value].process(high)
                 }
             }
+        }))
+        .sort((a, b) => a.bot - b.bot)
 
-            return b
+    input.filter(value => /^va/.test(value))
+        .map(str => str.match(/(\d+)/g))
+        .map(matches => ({
+            value: +matches[0],
+            bot: +matches[1]
+        }))
+        .forEach(value => {
+            bots[value.bot].process(value.value)
         })
-        .value()
 
-    values.forEach(v => {
-        bots[v.bot].f(v.value)
-    })
-
-    return _.find(bots, b => b.low.real === 17 && b.high.real === 61).bot
+    if (part === 1) {
+        return bots.find(bot => bot.low.chip === 17 && bot.high.chip === 61).bot
+    }
+    return output[0] * output[1] * output[2]
 }
