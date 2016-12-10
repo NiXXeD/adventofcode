@@ -8,20 +8,42 @@ Using Node v6 for ES6 syntax and features.
 
 To run one day/part
 ---
-`npm start <year#> <day#> <part#>`
+```
+# run a specific year, day, part
+npm start <year#> <day#> <part#>
+ 
+# assumes latest year
+npm start <day#> <part#>
+ 
+# assumes latest year and day
+npm start <part#>
+ 
+# assumes latest year, day, and part
+npm start
+```
 
-Example
+Example run
 ---
 ```
 npm start 2015 6 1
-6.1 running...
-6.1 answer:	   543903
-6.1 time:	   00:09:7400
+ 
+> 6.1 running...
+> 6.1 answer:	   543903
+> 6.1 time:	   00:09:7400
 ```
 
-To test all days in a year
+To test
 ---
-`npm run 2015-test`
+```
+# run tests for 2015
+npm run test-2016
+ 
+# run tests for 2016
+npm run test-2016
+ 
+# run tests for latest year
+npm test
+```
 
 To set up a new day
 ---
