@@ -47,6 +47,13 @@ npm test
 
 To set up a new day
 ---
-`npm run setup 2016 12`  
-Will create folders/files for `input`, `part1.js`, `part2.js` and entries in 
-the test file for that year.
+Creates the folder `dayN`, the files `input`, `part1.js`, `part2.js`, and tests in 
+`test.js` for the provided year.
+
+```
+# set up the next day in the current year
+npm run setup
+ 
+# set up an exact year / day
+npm run setup 2016 12
+```
