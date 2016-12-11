@@ -4,36 +4,25 @@ module.exports = (input, extra = 0) => {
         .map(str => str.match(/(generator|microchip)/g))
         .map(matches => matches ? matches.length : 0)
 
-    //extra items found
+    //extra items found for part 2
     floors[0] += extra
 
+    let floor = 0
     while (floors[0] || floors[1] || floors[2]) {
-        if (floors[0] === 2) {
-            floors[0] -= 2
-            floors[1] += 2
+        if (floors[floor] === 2) {
+            floors[floor] -= 2
+            floors[floor + 1] += 2
             moves++
-        } else if (floors[0] >= 2) {
-            floors[0]--
-            floors[1]++
+        } else if (floors[floor] >= 2) {
+            floors[floor]--
+            floors[floor + 1]++
             moves += 2
-        } else if (floors[1] === 2) {
-            floors[1] -= 2
-            floors[2] += 2
-            moves++
-        } else if (floors[1] >= 2) {
-            floors[1]--
-            floors[2]++
-            moves += 2
-        } else if (floors[2] === 2) {
-            floors[2] -= 2
-            floors[3] += 2
-            moves++
-        } else if (floors[2] > 0) {
-            //2 moves up, one down
-            floors[2]--
-            floors[3]++
-            moves += 2
+        } else if (floor < 3) {
+            floor++
+        } else {
+            floor = 0
         }
     }
+
     return moves
 }
