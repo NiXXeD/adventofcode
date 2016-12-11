@@ -48,7 +48,7 @@ input.forEach(line => {
     }
 
     print()
-    process.stdout.moveCursor(0,-6)
+    process.stdout.moveCursor(0, -6)
     sleep.usleep(1000000 / 25 >> 0)
 })
 
