@@ -26,7 +26,7 @@ if (!fs.existsSync(dir)) {
 
     //code
     console.log(`Creating code for parts 1 and 2...`)
-    let func = `module.exports = input => {\n     return input\n}`
+    let func = `module.exports = input => {\n    return input\n}`
     fs.writeFileSync(`${dir}/part1.js`, func)
     fs.writeFileSync(`${dir}/part2.js`, func)
 
