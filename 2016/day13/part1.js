@@ -6,20 +6,21 @@ module.exports = input => {
         return wat.toString(2).split``.reduce((p, v) => +v + p, 0) % 2 === 0
     }
 
-    let visited = []
-    let moves = [{x: 1, y: 1, m: 0}]
-    let find = (x, y, m) => visited.find(loc => loc.x === x && loc.y === y && loc.m <= m)
+    let visited = [], moves = [{x: 1, y: 1, m: 0}]
+    let find = (a, x, y) => a.find(l => l.x === x && l.y === y)
     while (moves.length) {
         let {x, y, m} = moves.pop()
         visited.push({x, y, m})
-        if (test(x + 1, y) && !find(x + 1, y, m + 1))
-            moves.push({x: x + 1, y, m: m + 1})
-        if (test(x, y + 1) && !find(x, y + 1, m + 1))
-            moves.push({x, y: y + 1, m: m + 1})
-        if (test(x - 1, y) && !find(x - 1, y, m + 1))
-            moves.push({x: x - 1, y, m: m + 1})
-        if (test(x, y - 1) && !find(x, y - 1, m + 1))
-            moves.push({x, y: y - 1, m: m + 1})
+
+        if (x === goalX && y === goalY) break;
+        if (test(x + 1, y) && !find(visited, x + 1, y) && !find(moves, x + 1, y))
+            moves.unshift({x: x + 1, y, m: m + 1})
+        if (test(x, y + 1) && !find(visited, x, y + 1) && !find(moves, x, y + 1))
+            moves.unshift({x, y: y + 1, m: m + 1})
+        if (test(x - 1, y) && !find(visited, x - 1, y) && !find(moves, x - 1, y))
+            moves.unshift({x: x - 1, y, m: m + 1})
+        if (test(x, y - 1) && !find(visited, x, y - 1) && !find(moves, x, y - 1))
+            moves.unshift({x, y: y - 1, m: m + 1})
     }
 
     return visited.filter(v => v.x === goalX && v.y === goalY).slice(-1)[0].m
