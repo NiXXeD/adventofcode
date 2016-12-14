@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const sleep = require('sleep')
 const fs = require('fs')
+const chalk = require('chalk')
 
 let input = fs.readFileSync(`./2016/day13/input`, 'utf-8').trimRight().split('\n')
 
@@ -36,15 +37,17 @@ while (moves.length) {
     if (test(x, y - 1) && !_.find(visited, {x, y: y - 1}) && !_.find(moves, {x, y: y - 1}))
         moves.unshift({x, y: y - 1, m: m + 1})
 
-    process.stdout.moveCursor(0, 0 - goalY - 7)
     let output = grid.map((row, gy) => {
         return row.map((col, gx) => {
-            if (_.find(visited, {x: gx, y: gy})) return 'O'
-            else return (col ? '.' : '#')
+            if (gx === 1 && gy === 1) return chalk.yellow('O')
+            else if (gx === goalX && gy === goalY) return chalk.yellow('O')
+            else if (_.find(visited, {x: gx, y: gy})) return chalk.green('O')
+            else return (col ? ' ' : chalk.gray('#'))
         }).join``
     }).join('\n')
-    console.log('\n' + output + `\nMoves: ${moves.length} Visited: ${visited.length}\n`)
+    console.log(output + `\nMoves: ${moves.length} Visited: ${visited.length}\n`)
     sleep.usleep(1000000 / 25 >> 0)
+    process.stdout.moveCursor(0, 0 - goalY - 6)
 }
 
 console.log(`Final answer: ${visited.filter(v => v.x === goalX && v.y === goalY).slice(-1)[0].m}`)

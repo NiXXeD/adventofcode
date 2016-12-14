@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const sleep = require('sleep')
 const fs = require('fs')
+const chalk = require('chalk')
 
 let input = fs.readFileSync(`./2016/day13/input`, 'utf-8').trimRight().split('\n')
 let test = (x, y) => {
@@ -37,8 +38,8 @@ while (moves.length) {
     process.stdout.moveCursor(0, -33)
     let output = grid.map((row, gy) => {
         return row.map((col, gx) => {
-            if (_.find(visited, {x: gx, y: gy})) return 'O'
-            else return (col ? '.' : '#')
+            if (_.find(visited, {x: gx, y: gy})) return chalk.green('O')
+            else return (col ? ' ' : chalk.gray('#'))
         }).join``
     }).join('\n')
     console.log('\n' + output + `\nVisited: ${visited.length}\n`)
