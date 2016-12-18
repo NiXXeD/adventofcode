@@ -5,16 +5,8 @@ module.exports = (input, max = 40) => {
         let prevRow = rows.slice(-1)[0]
         for (let i = 0; i < prevRow.length; i++) {
             let left = (i == 0 ? 1 : prevRow[i - 1])
-            let center = prevRow[i]
             let right = (i == prevRow.length - 1 ? 1 : prevRow[i + 1])
-
-            let isTrap =
-                (!left && !center && right) ||
-                (left && !center && !right) ||
-                (!left && center && right) ||
-                (left && center && !right)
-
-            newRow[i] = isTrap ? 0 : 1
+            newRow[i] = left == right ? 1 : 0
         }
         rows.push(newRow)
     }
