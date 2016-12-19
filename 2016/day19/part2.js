@@ -1,8 +1,7 @@
-const _ = require('lodash')
 module.exports = input => {
     let target = +input
-    let powers = _.range(24).map(i => Math.pow(3, i))
-    let highestPower = _.findLast(powers, i => i <= target)
+    let powers = [...Array(20).keys()].map(i => Math.pow(3, i)).reverse()
+    let highestPower = powers.find(i => i <= target)
     let diff = target - highestPower
 
     if (highestPower === target) return highestPower
