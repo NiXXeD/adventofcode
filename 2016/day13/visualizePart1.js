@@ -28,7 +28,7 @@ while (moves.length) {
 
     if (_.find(visited, {x: goalX, y: goalY}))
         break;
-    if (test(x + 1, y) && !_.find(visited, {X: x + 1, y}) && !_.find(moves, {X: x + 1, y}))
+    if (test(x + 1, y) && !_.find(visited, {x: x + 1, y}) && !_.find(moves, {x: x + 1, y}))
         moves.unshift({x: x + 1, y, m: m + 1})
     if (test(x, y + 1) && !_.find(visited, {x, y: y + 1}) && !_.find(moves, {x, y: y + 1}))
         moves.unshift({x, y: y + 1, m: m + 1})
