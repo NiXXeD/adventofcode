@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const md5 = require('md5')
-const cache = require('./cache.json')
 const fs = require('fs')
+const cache = fs.existsSync('./2016/day5/cache.json') ? require('./cache.json') : []
 
 module.exports = input => {
     let password = '--------'.split``

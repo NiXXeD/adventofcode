@@ -1,7 +1,7 @@
 const md5 = require('md5')
 const _ = require('lodash')
-const cache = require('./cache.json')
 const fs = require('fs')
+const cache = fs.existsSync('./2016/day14/cache.json') ? require('./cache.json') : []
 
 module.exports = input => {
     let index = 0

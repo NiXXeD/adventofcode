@@ -2,7 +2,7 @@ const _ = require('lodash')
 const jsc = require('js-combinatorics')
 const goals = '1234567'.split``
 const fs = require('fs')
-const cache = require('./cache.json')
+const cache = fs.existsSync('./2016/day24/cache.json') ? require('./cache.json') : {}
 
 module.exports = (input, part2 = false) => {
     let grid = input
