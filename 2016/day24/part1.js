@@ -81,6 +81,3 @@ module.exports = (input, part2 = false) => {
         }
     }
 }
-
-//350 low
-//656 high
