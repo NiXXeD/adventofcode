@@ -23,7 +23,7 @@ module.exports = (input, part2 = false) => {
         } else if (a === 'jnz' && deref(b) !== 0) {
             i += (deref(c)) - 1
         } else if (a === 'mlt') {
-            registers[d] = deref(b) * deref(c)
+            registers[d] += deref(b) * deref(c)
         } else if (a === 'tgl') {
             let it = instructions[i + deref(b)]
             if (it) {
