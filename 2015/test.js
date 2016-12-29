@@ -1,10 +1,10 @@
 const assert = require('assert')
 
-describe('advent of code', () => {
+describe('advent of code 2015', () => {
     const run = require('../run')
 
     function test(day, part, expected) {
-        const actual = run(2015, day, part)
+        const actual = run(2015, day, part, false)
         return assert.equal(expected, actual)
     }
 

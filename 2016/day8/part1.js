@@ -1,6 +1,6 @@
 const _ = require('lodash')
 
-module.exports = (input, print) => {
+module.exports = input => {
     let screen = []
     for (let x = 0; x < 6; x++) {
         let row = []
@@ -46,20 +46,15 @@ module.exports = (input, print) => {
         }
     })
 
-    function sum() {
-        let sum = 0
-        let lines = []
-        for (let x = 0; x < 6; x++) {
-            for (let y = 0; y < 50; y++) {
-                sum += screen[x][y]
-            }
-
-            lines.push(screen[x].map(i => i ? '#' : '.').join``)
+    let sum = 0
+    let lines = []
+    for (let x = 0; x < 6; x++) {
+        for (let y = 0; y < 50; y++) {
+            sum += screen[x][y]
         }
 
-        if (print) console.log(lines.join('\n'))
-        return sum
+        lines.push(screen[x].map(i => i ? '#' : '.').join``)
     }
 
-    return sum(print)
+    return sum
 }
