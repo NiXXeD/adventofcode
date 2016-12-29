@@ -1,8 +1,7 @@
 module.exports = i => i.map(s => s.match(/(.+?)-(\d+)\[(.+?)]/))
-    .map(v => ({
-        sector: +v[2],
-        checksum: v[3],
-        chars: require('lodash')(v[1].replace(/-/g, ''))
+    .map(([, data, sector, checksum]) => ({
+        sector, checksum,
+        chars: require('lodash')(data.replace(/-/g, ''))
             .countBy()
             .map((n, c) => ({c, n}))
             .orderBy(['n', 'c'], ['desc', 'asc'])
@@ -11,4 +10,4 @@ module.exports = i => i.map(s => s.match(/(.+?)-(\d+)\[(.+?)]/))
             .join``
     }))
     .filter(v => v.checksum === v.chars)
-    .reduce((p, v) => p + v.sector, 0)
+    .reduce((p, v) => p + +v.sector, 0)
