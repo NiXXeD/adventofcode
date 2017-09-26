@@ -2,11 +2,7 @@ const _ = require('lodash')
 const fs = require('fs')
 
 //defaults
-let year = new Date().getFullYear()
-let day = _(fs.readdirSync(`${year}`))
-        .filter(s => /^day/.test(s))
-        .map(s => +s.match(/(\d+)/g)[0])
-        .max() + 1
+let {year, day} = require('./defaults')
 
 //process args
 let args = _.compact([process.argv[2], process.argv[3]])
@@ -17,7 +13,12 @@ if (args.length === 2) {
 }
 
 //create things
-let dir = `./${year}/day${day}`
+let dir = `./${year}`
+if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir)
+    fs.writeFileSync(`${dir}/text.js`, 12345)
+}
+dir = `./${year}/day${day}`
 if (!fs.existsSync(dir)) {
     //directories
     console.log(`Creating directories for ${year}.${day}...`)
@@ -31,13 +32,16 @@ if (!fs.existsSync(dir)) {
     fs.writeFileSync(`${dir}/part2.js`, func)
 
     //tests
-    console.log(`Creating unit tests...`)
-    let tests = fs.readFileSync(`${year}/test.js`, 'utf-8').split('\n')
-    tests.splice(tests.length - 2, 0,
-        `    it('day ${_.padStart(day, 2, '0')}, part 1', () => test(${day}, 1, 12345))`,
-        `    it('day ${_.padStart(day, 2, '0')}, part 2', () => test(${day}, 2, 12345))`
-    )
-    fs.writeFileSync(`${year}/test.js`, tests.join('\n'))
+    let testPath = `${year}/test.js`
+    if (fs.existsSync(testPath)) {
+        console.log(`Creating unit tests...`)
+        let tests = fs.readFileSync(testPath, 'utf-8').split('\n')
+        tests.splice(tests.length - 2, 0,
+            `    it('day ${_.padStart(day, 2, '0')}, part 1', () => test(${day}, 1, 12345))`,
+            `    it('day ${_.padStart(day, 2, '0')}, part 2', () => test(${day}, 2, 12345))`
+        )
+        fs.writeFileSync(`${year}/test.js`, tests.join('\n'))
+    }
 
     console.log('Done.')
 }
