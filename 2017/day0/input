@@ -1,0 +1,1236 @@
+cpy -1232 d
+jnz 1 1228
+cpy 1 a
+cpy -1187 d
+jnz 1 1158
+out 120
+cpy 1 a
+cpy -1183 d
+jnz 1 1154
+out 10
+cpy -1194 d
+jnz 1 1182
+cpy 0 a
+cpy -1177 d
+jnz 1 1148
+cpy -1211 d
+jnz 1 1208
+cpy 4 a
+cpy -1172 d
+jnz 1 1143
+out 10
+cpy -1211 d
+jnz 1 1207
+cpy 1 a
+cpy -1166 d
+jnz 1 1137
+out 120
+cpy 1 a
+cpy -1162 d
+jnz 1 1133
+out 10
+cpy -1173 d
+jnz 1 1161
+cpy 0 a
+cpy -1156 d
+jnz 1 1127
+cpy -1190 d
+jnz 1 1187
+cpy 7 a
+cpy -1151 d
+jnz 1 1122
+out 10
+cpy -1190 d
+jnz 1 1186
+cpy 1 a
+cpy -1145 d
+jnz 1 1116
+out 120
+cpy 1 a
+cpy -1141 d
+jnz 1 1112
+out 10
+cpy -1152 d
+jnz 1 1140
+cpy 0 a
+cpy -1135 d
+jnz 1 1106
+cpy -1169 d
+jnz 1 1166
+cpy 10 a
+cpy -1130 d
+jnz 1 1101
+out 10
+cpy -1169 d
+jnz 1 1165
+cpy 1 a
+cpy -1124 d
+jnz 1 1095
+out 120
+cpy 1 a
+cpy -1120 d
+jnz 1 1091
+out 10
+cpy -1131 d
+jnz 1 1119
+cpy 0 a
+cpy -1114 d
+jnz 1 1085
+cpy -1148 d
+jnz 1 1145
+cpy 2 a
+cpy -1109 d
+jnz 1 1080
+out 10
+cpy -1148 d
+jnz 1 1144
+cpy 1 a
+cpy -1103 d
+jnz 1 1074
+out 120
+cpy 1 a
+cpy -1099 d
+jnz 1 1070
+out 10
+cpy -1110 d
+jnz 1 1098
+cpy 0 a
+cpy -1093 d
+jnz 1 1064
+cpy -1127 d
+jnz 1 1124
+cpy 5 a
+cpy -1088 d
+jnz 1 1059
+out 10
+cpy -1127 d
+jnz 1 1123
+cpy 1 a
+cpy -1082 d
+jnz 1 1053
+out 120
+cpy 1 a
+cpy -1078 d
+jnz 1 1049
+out 10
+cpy -1089 d
+jnz 1 1077
+cpy 0 a
+cpy -1072 d
+jnz 1 1043
+cpy -1106 d
+jnz 1 1103
+cpy 4 a
+cpy -1067 d
+jnz 1 1038
+out 10
+cpy -1106 d
+jnz 1 1102
+cpy 1 a
+cpy -1061 d
+jnz 1 1032
+out 120
+cpy 1 a
+cpy -1057 d
+jnz 1 1028
+out 10
+cpy -1068 d
+jnz 1 1056
+cpy 0 a
+cpy -1051 d
+jnz 1 1022
+cpy -1085 d
+jnz 1 1082
+cpy 2 a
+cpy -1046 d
+jnz 1 1017
+out 10
+cpy -1085 d
+jnz 1 1081
+cpy 1 a
+cpy -1040 d
+jnz 1 1011
+out 120
+cpy 1 a
+cpy -1036 d
+jnz 1 1007
+out 10
+cpy -1047 d
+jnz 1 1035
+cpy 0 a
+cpy -1030 d
+jnz 1 1001
+cpy -1064 d
+jnz 1 1061
+cpy 4 a
+cpy -1025 d
+jnz 1 996
+out 10
+cpy -1064 d
+jnz 1 1060
+cpy 1 a
+cpy -1019 d
+jnz 1 990
+out 120
+cpy 1 a
+cpy -1015 d
+jnz 1 986
+out 10
+cpy -1026 d
+jnz 1 1014
+cpy 0 a
+cpy -1009 d
+jnz 1 980
+cpy -1043 d
+jnz 1 1040
+cpy 4 a
+cpy -1004 d
+jnz 1 975
+out 10
+cpy -1043 d
+jnz 1 1039
+cpy 1 a
+cpy -998 d
+jnz 1 969
+out 120
+cpy 2 a
+cpy -994 d
+jnz 1 965
+out 10
+cpy -1005 d
+jnz 1 993
+cpy 0 a
+cpy -988 d
+jnz 1 959
+cpy -1022 d
+jnz 1 1019
+cpy 29 a
+cpy -983 d
+jnz 1 954
+out 10
+cpy -1011 d
+jnz 1 996
+cpy 17 a
+cpy -977 d
+jnz 1 948
+cpy -1011 d
+jnz 1 1008
+cpy 2 a
+cpy -972 d
+jnz 1 943
+out 10
+cpy -1000 d
+jnz 1 985
+cpy 10 a
+cpy -966 d
+jnz 1 937
+cpy -1000 d
+jnz 1 997
+cpy 1 a
+cpy -961 d
+jnz 1 932
+out 10
+cpy -989 d
+jnz 1 974
+cpy 0 a
+cpy -955 d
+jnz 1 926
+cpy -989 d
+jnz 1 986
+cpy 1 a
+cpy -950 d
+jnz 1 921
+out 10
+cpy -989 d
+jnz 1 985
+cpy 20 a
+cpy -944 d
+jnz 1 915
+out 120
+cpy 1 a
+cpy -940 d
+jnz 1 911
+out 10
+cpy -951 d
+jnz 1 939
+cpy 2 a
+cpy -934 d
+jnz 1 905
+cpy -968 d
+jnz 1 965
+cpy 4 a
+cpy -929 d
+jnz 1 900
+out 10
+cpy -940 d
+jnz 1 928
+cpy 1 a
+cpy -923 d
+jnz 1 894
+cpy -957 d
+jnz 1 954
+cpy 5 a
+cpy -918 d
+jnz 1 889
+out 10
+cpy -929 d
+jnz 1 917
+cpy 0 a
+cpy -912 d
+jnz 1 883
+cpy -946 d
+jnz 1 943
+cpy 3 a
+cpy -907 d
+jnz 1 878
+out 10
+cpy -946 d
+jnz 1 942
+cpy 1 a
+cpy -901 d
+jnz 1 872
+out 120
+cpy 4 a
+cpy -897 d
+jnz 1 868
+out 10
+cpy -925 d
+jnz 1 910
+cpy 32 a
+cpy -891 d
+jnz 1 862
+cpy -925 d
+jnz 1 922
+cpy 1 a
+cpy -886 d
+jnz 1 857
+out 10
+cpy -897 d
+jnz 1 885
+cpy 3 a
+cpy -880 d
+jnz 1 851
+cpy -914 d
+jnz 1 911
+cpy 30 a
+cpy -875 d
+jnz 1 846
+out 10
+cpy -886 d
+jnz 1 874
+cpy 1 a
+cpy -869 d
+jnz 1 840
+cpy -903 d
+jnz 1 900
+cpy 18 a
+cpy -864 d
+jnz 1 835
+out 10
+cpy -875 d
+jnz 1 863
+cpy 0 a
+cpy -858 d
+jnz 1 829
+cpy -892 d
+jnz 1 889
+cpy 14 a
+cpy -853 d
+jnz 1 824
+out 10
+cpy -881 d
+jnz 1 866
+cpy 10 a
+cpy -847 d
+jnz 1 818
+cpy -881 d
+jnz 1 878
+cpy 3 a
+cpy -842 d
+jnz 1 813
+out 10
+cpy -870 d
+jnz 1 855
+cpy 6 a
+cpy -836 d
+jnz 1 807
+cpy -870 d
+jnz 1 867
+cpy 3 a
+cpy -831 d
+jnz 1 802
+out 10
+cpy -859 d
+jnz 1 844
+cpy 4 a
+cpy -825 d
+jnz 1 796
+cpy -859 d
+jnz 1 856
+cpy 1 a
+cpy -820 d
+jnz 1 791
+out 10
+cpy -848 d
+jnz 1 833
+cpy 0 a
+cpy -814 d
+jnz 1 785
+cpy -848 d
+jnz 1 845
+cpy 1 a
+cpy -809 d
+jnz 1 780
+out 10
+cpy -848 d
+jnz 1 844
+cpy 12 a
+cpy -803 d
+jnz 1 774
+out 120
+cpy 1 a
+cpy -799 d
+jnz 1 770
+out 10
+cpy -810 d
+jnz 1 798
+cpy 2 a
+cpy -793 d
+jnz 1 764
+cpy -827 d
+jnz 1 824
+cpy 29 a
+cpy -788 d
+jnz 1 759
+out 10
+cpy -816 d
+jnz 1 801
+cpy 5 a
+cpy -782 d
+jnz 1 753
+cpy -816 d
+jnz 1 813
+cpy 2 a
+cpy -777 d
+jnz 1 748
+out 10
+cpy -788 d
+jnz 1 776
+cpy 2 a
+cpy -771 d
+jnz 1 742
+cpy -805 d
+jnz 1 802
+cpy 21 a
+cpy -766 d
+jnz 1 737
+out 10
+cpy -794 d
+jnz 1 779
+cpy 15 a
+cpy -760 d
+jnz 1 731
+cpy -794 d
+jnz 1 791
+cpy 3 a
+cpy -755 d
+jnz 1 726
+out 10
+cpy -783 d
+jnz 1 768
+cpy 2 a
+cpy -749 d
+jnz 1 720
+cpy -783 d
+jnz 1 780
+cpy 2 a
+cpy -744 d
+jnz 1 715
+out 10
+cpy -755 d
+jnz 1 743
+cpy 3 a
+cpy -738 d
+jnz 1 709
+cpy -772 d
+jnz 1 769
+cpy 20 a
+cpy -733 d
+jnz 1 704
+out 10
+cpy -744 d
+jnz 1 732
+cpy 2 a
+cpy -727 d
+jnz 1 698
+cpy -761 d
+jnz 1 758
+cpy 29 a
+cpy -722 d
+jnz 1 693
+out 10
+cpy -733 d
+jnz 1 721
+cpy 0 a
+cpy -716 d
+jnz 1 687
+cpy -750 d
+jnz 1 747
+cpy 47 a
+cpy -711 d
+jnz 1 682
+out 10
+cpy -739 d
+jnz 1 724
+cpy 11 a
+cpy -705 d
+jnz 1 676
+cpy -739 d
+jnz 1 736
+cpy 3 a
+cpy -700 d
+jnz 1 671
+out 10
+cpy -728 d
+jnz 1 713
+cpy 8 a
+cpy -694 d
+jnz 1 665
+cpy -728 d
+jnz 1 725
+cpy 3 a
+cpy -689 d
+jnz 1 660
+out 10
+cpy -717 d
+jnz 1 702
+cpy 7 a
+cpy -683 d
+jnz 1 654
+cpy -717 d
+jnz 1 714
+cpy 1 a
+cpy -678 d
+jnz 1 649
+out 10
+cpy -706 d
+jnz 1 691
+cpy 6 a
+cpy -672 d
+jnz 1 643
+cpy -706 d
+jnz 1 703
+cpy 2 a
+cpy -667 d
+jnz 1 638
+out 10
+cpy -695 d
+jnz 1 680
+cpy 5 a
+cpy -661 d
+jnz 1 632
+cpy -695 d
+jnz 1 692
+cpy 1 a
+cpy -656 d
+jnz 1 627
+out 10
+cpy -684 d
+jnz 1 669
+cpy 4 a
+cpy -650 d
+jnz 1 621
+cpy -684 d
+jnz 1 681
+cpy 2 a
+cpy -645 d
+jnz 1 616
+out 10
+cpy -673 d
+jnz 1 658
+cpy 3 a
+cpy -639 d
+jnz 1 610
+cpy -673 d
+jnz 1 670
+cpy 1 a
+cpy -634 d
+jnz 1 605
+out 10
+cpy -662 d
+jnz 1 647
+cpy 1 a
+cpy -628 d
+jnz 1 599
+cpy -662 d
+jnz 1 659
+cpy 3 a
+cpy -623 d
+jnz 1 594
+out 10
+cpy -651 d
+jnz 1 636
+cpy 0 a
+cpy -617 d
+jnz 1 588
+cpy -651 d
+jnz 1 648
+cpy 1 a
+cpy -612 d
+jnz 1 583
+out 10
+cpy -651 d
+jnz 1 647
+cpy 13 a
+cpy -606 d
+jnz 1 577
+out 120
+cpy 1 a
+cpy -602 d
+jnz 1 573
+out 10
+cpy -630 d
+jnz 1 615
+cpy 10 a
+cpy -596 d
+jnz 1 567
+cpy -630 d
+jnz 1 627
+cpy 2 a
+cpy -591 d
+jnz 1 562
+out 10
+cpy -619 d
+jnz 1 604
+cpy 9 a
+cpy -585 d
+jnz 1 556
+cpy -619 d
+jnz 1 616
+cpy 2 a
+cpy -580 d
+jnz 1 551
+out 10
+cpy -591 d
+jnz 1 579
+cpy 0 a
+cpy -574 d
+jnz 1 545
+cpy -608 d
+jnz 1 605
+cpy 3 a
+cpy -569 d
+jnz 1 540
+out 10
+cpy -597 d
+jnz 1 582
+cpy 27 a
+cpy -563 d
+jnz 1 534
+cpy -597 d
+jnz 1 594
+cpy 1 a
+cpy -558 d
+jnz 1 529
+out 10
+cpy -569 d
+jnz 1 557
+cpy 4 a
+cpy -552 d
+jnz 1 523
+cpy -586 d
+jnz 1 583
+cpy 9 a
+cpy -547 d
+jnz 1 518
+out 10
+cpy -558 d
+jnz 1 546
+cpy 3 a
+cpy -541 d
+jnz 1 512
+cpy -575 d
+jnz 1 572
+cpy 1 a
+cpy -536 d
+jnz 1 507
+out 10
+cpy -547 d
+jnz 1 535
+cpy 2 a
+cpy -530 d
+jnz 1 501
+cpy -564 d
+jnz 1 561
+cpy 1 a
+cpy -525 d
+jnz 1 496
+out 10
+cpy -536 d
+jnz 1 524
+cpy 1 a
+cpy -519 d
+jnz 1 490
+cpy -553 d
+jnz 1 550
+cpy 2 a
+cpy -514 d
+jnz 1 485
+out 10
+cpy -525 d
+jnz 1 513
+cpy 0 a
+cpy -508 d
+jnz 1 479
+cpy -542 d
+jnz 1 539
+cpy 1 a
+cpy -503 d
+jnz 1 474
+out 10
+cpy -542 d
+jnz 1 538
+cpy 1 a
+cpy -497 d
+jnz 1 468
+out 120
+cpy 5 a
+cpy -493 d
+jnz 1 464
+out 10
+cpy -521 d
+jnz 1 506
+cpy 33 a
+cpy -487 d
+jnz 1 458
+cpy -521 d
+jnz 1 518
+cpy 1 a
+cpy -482 d
+jnz 1 453
+out 10
+cpy -510 d
+jnz 1 495
+cpy 30 a
+cpy -476 d
+jnz 1 447
+cpy -510 d
+jnz 1 507
+cpy 4 a
+cpy -471 d
+jnz 1 442
+out 10
+cpy -499 d
+jnz 1 484
+cpy 24 a
+cpy -465 d
+jnz 1 436
+cpy -499 d
+jnz 1 496
+cpy 1 a
+cpy -460 d
+jnz 1 431
+out 10
+cpy -488 d
+jnz 1 473
+cpy 23 a
+cpy -454 d
+jnz 1 425
+cpy -488 d
+jnz 1 485
+cpy 1 a
+cpy -449 d
+jnz 1 420
+out 10
+cpy -477 d
+jnz 1 462
+cpy 18 a
+cpy -443 d
+jnz 1 414
+cpy -477 d
+jnz 1 474
+cpy 1 a
+cpy -438 d
+jnz 1 409
+out 10
+cpy -466 d
+jnz 1 451
+cpy 8 a
+cpy -432 d
+jnz 1 403
+cpy -466 d
+jnz 1 463
+cpy 1 a
+cpy -427 d
+jnz 1 398
+out 10
+cpy -438 d
+jnz 1 426
+cpy 4 a
+cpy -421 d
+jnz 1 392
+cpy -455 d
+jnz 1 452
+cpy 23 a
+cpy -416 d
+jnz 1 387
+out 10
+cpy -427 d
+jnz 1 415
+cpy 3 a
+cpy -410 d
+jnz 1 381
+cpy -444 d
+jnz 1 441
+cpy 1 a
+cpy -405 d
+jnz 1 376
+out 10
+cpy -416 d
+jnz 1 404
+cpy 2 a
+cpy -399 d
+jnz 1 370
+cpy -433 d
+jnz 1 430
+cpy 1 a
+cpy -394 d
+jnz 1 365
+out 10
+cpy -405 d
+jnz 1 393
+cpy 1 a
+cpy -388 d
+jnz 1 359
+cpy -422 d
+jnz 1 419
+cpy 3 a
+cpy -383 d
+jnz 1 354
+out 10
+cpy -394 d
+jnz 1 382
+cpy 0 a
+cpy -377 d
+jnz 1 348
+cpy -411 d
+jnz 1 408
+cpy 1 a
+cpy -372 d
+jnz 1 343
+out 10
+cpy -411 d
+jnz 1 407
+cpy 1 a
+cpy -366 d
+jnz 1 337
+out 120
+cpy 6 a
+cpy -362 d
+jnz 1 333
+out 10
+cpy -390 d
+jnz 1 375
+cpy 40 a
+cpy -356 d
+jnz 1 327
+cpy -390 d
+jnz 1 387
+cpy 2 a
+cpy -351 d
+jnz 1 322
+out 10
+cpy -379 d
+jnz 1 364
+cpy 30 a
+cpy -345 d
+jnz 1 316
+cpy -379 d
+jnz 1 376
+cpy 2 a
+cpy -340 d
+jnz 1 311
+out 10
+cpy -368 d
+jnz 1 353
+cpy 17 a
+cpy -334 d
+jnz 1 305
+cpy -368 d
+jnz 1 365
+cpy 2 a
+cpy -329 d
+jnz 1 300
+out 10
+cpy -357 d
+jnz 1 342
+cpy 16 a
+cpy -323 d
+jnz 1 294
+cpy -357 d
+jnz 1 354
+cpy 2 a
+cpy -318 d
+jnz 1 289
+out 10
+cpy -329 d
+jnz 1 317
+cpy 5 a
+cpy -312 d
+jnz 1 283
+cpy -346 d
+jnz 1 343
+cpy 37 a
+cpy -307 d
+jnz 1 278
+out 10
+cpy -318 d
+jnz 1 306
+cpy 4 a
+cpy -301 d
+jnz 1 272
+cpy -335 d
+jnz 1 332
+cpy 5 a
+cpy -296 d
+jnz 1 267
+out 10
+cpy -307 d
+jnz 1 295
+cpy 3 a
+cpy -290 d
+jnz 1 261
+cpy -324 d
+jnz 1 321
+cpy 5 a
+cpy -285 d
+jnz 1 256
+out 10
+cpy -296 d
+jnz 1 284
+cpy 2 a
+cpy -279 d
+jnz 1 250
+cpy -313 d
+jnz 1 310
+cpy 25 a
+cpy -274 d
+jnz 1 245
+out 10
+cpy -285 d
+jnz 1 273
+cpy 1 a
+cpy -268 d
+jnz 1 239
+cpy -302 d
+jnz 1 299
+cpy 5 a
+cpy -263 d
+jnz 1 234
+out 10
+cpy -274 d
+jnz 1 262
+cpy 0 a
+cpy -257 d
+jnz 1 228
+cpy -291 d
+jnz 1 288
+cpy 5 a
+cpy -252 d
+jnz 1 223
+out 10
+cpy -280 d
+jnz 1 265
+cpy 41 a
+cpy -246 d
+jnz 1 217
+cpy -280 d
+jnz 1 277
+cpy 4 a
+cpy -241 d
+jnz 1 212
+out 10
+cpy -269 d
+jnz 1 254
+cpy 38 a
+cpy -235 d
+jnz 1 206
+cpy -269 d
+jnz 1 266
+cpy 5 a
+cpy -230 d
+jnz 1 201
+out 10
+cpy -258 d
+jnz 1 243
+cpy 36 a
+cpy -224 d
+jnz 1 195
+cpy -258 d
+jnz 1 255
+cpy 5 a
+cpy -219 d
+jnz 1 190
+out 10
+cpy -247 d
+jnz 1 232
+cpy 33 a
+cpy -213 d
+jnz 1 184
+cpy -247 d
+jnz 1 244
+cpy 1 a
+cpy -208 d
+jnz 1 179
+out 10
+cpy -236 d
+jnz 1 221
+cpy 32 a
+cpy -202 d
+jnz 1 173
+cpy -236 d
+jnz 1 233
+cpy 5 a
+cpy -197 d
+jnz 1 168
+out 10
+cpy -225 d
+jnz 1 210
+cpy 31 a
+cpy -191 d
+jnz 1 162
+cpy -225 d
+jnz 1 222
+cpy 1 a
+cpy -186 d
+jnz 1 157
+out 10
+cpy -214 d
+jnz 1 199
+cpy 28 a
+cpy -180 d
+jnz 1 151
+cpy -214 d
+jnz 1 211
+cpy 1 a
+cpy -175 d
+jnz 1 146
+out 10
+cpy -203 d
+jnz 1 188
+cpy 27 a
+cpy -169 d
+jnz 1 140
+cpy -203 d
+jnz 1 200
+cpy 3 a
+cpy -164 d
+jnz 1 135
+out 10
+cpy -192 d
+jnz 1 177
+cpy 26 a
+cpy -158 d
+jnz 1 129
+cpy -192 d
+jnz 1 189
+cpy 4 a
+cpy -153 d
+jnz 1 124
+out 10
+cpy -181 d
+jnz 1 166
+cpy 25 a
+cpy -147 d
+jnz 1 118
+cpy -181 d
+jnz 1 178
+cpy 5 a
+cpy -142 d
+jnz 1 113
+out 10
+cpy -170 d
+jnz 1 155
+cpy 18 a
+cpy -136 d
+jnz 1 107
+cpy -170 d
+jnz 1 167
+cpy 1 a
+cpy -131 d
+jnz 1 102
+out 10
+cpy -159 d
+jnz 1 144
+cpy 17 a
+cpy -125 d
+jnz 1 96
+cpy -159 d
+jnz 1 156
+cpy 5 a
+cpy -120 d
+jnz 1 91
+out 10
+cpy -148 d
+jnz 1 133
+cpy 16 a
+cpy -114 d
+jnz 1 85
+cpy -148 d
+jnz 1 145
+cpy 5 a
+cpy -109 d
+jnz 1 80
+out 10
+cpy -137 d
+jnz 1 122
+cpy 15 a
+cpy -103 d
+jnz 1 74
+cpy -137 d
+jnz 1 134
+cpy 1 a
+cpy -98 d
+jnz 1 69
+out 10
+cpy -126 d
+jnz 1 111
+cpy 13 a
+cpy -92 d
+jnz 1 63
+cpy -126 d
+jnz 1 123
+cpy 3 a
+cpy -87 d
+jnz 1 58
+out 10
+cpy -115 d
+jnz 1 100
+cpy 12 a
+cpy -81 d
+jnz 1 52
+cpy -115 d
+jnz 1 112
+cpy 2 a
+cpy -76 d
+jnz 1 47
+out 10
+cpy -104 d
+jnz 1 89
+cpy 11 a
+cpy -70 d
+jnz 1 41
+cpy -104 d
+jnz 1 101
+cpy 2 a
+cpy -65 d
+jnz 1 36
+out 10
+cpy -93 d
+jnz 1 78
+cpy 10 a
+cpy -59 d
+jnz 1 30
+cpy -93 d
+jnz 1 90
+cpy 3 a
+cpy -54 d
+jnz 1 25
+out 10
+cpy -82 d
+jnz 1 67
+cpy 8 a
+cpy -48 d
+jnz 1 19
+cpy -82 d
+jnz 1 79
+cpy 1 a
+cpy -43 d
+jnz 1 14
+out 10
+cpy -71 d
+jnz 1 56
+cpy 5 a
+cpy -37 d
+jnz 1 8
+cpy -71 d
+jnz 1 68
+cpy 1 a
+cpy -32 d
+jnz 1 3
+out 10
+jnz 1 74
+cpy a b
+cpy 0 a
+cpy 10 c
+jnz b 2
+jnz 1 6
+dec b
+dec c
+jnz c -4
+inc a
+jnz 1 -7
+cpy 10 b
+jnz c 2
+jnz 1 4
+dec b
+dec c
+jnz 1 -4
+jnz 0 0
+jnz a 2
+jnz 1 6
+cpy 48 c
+dec c
+inc a
+jnz c -2
+out a
+jnz 0 0
+cpy 48 c
+dec c
+inc b
+jnz c -2
+out b
+jnz 1 d
+out 114
+out 111
+out 116
+out 97
+out 116
+out 101
+out 32
+out 114
+out 111
+out 119
+out 32
+out 121
+out 61
+jnz 1 d
+out 114
+out 111
+out 116
+out 97
+out 116
+out 101
+out 32
+out 99
+out 111
+out 108
+out 117
+out 109
+out 110
+out 32
+out 120
+out 61
+jnz 1 d
+out 32
+out 98
+out 121
+out 32
+jnz 1 d
+out 114
+out 101
+out 99
+out 116
+out 32
+jnz 1 d
+jnz 0 0

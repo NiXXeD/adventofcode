@@ -16,7 +16,6 @@ if (args.length === 2) {
 let dir = `./${year}`
 if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir)
-    fs.writeFileSync(`${dir}/text.js`, 12345)
 }
 dir = `./${year}/day${day}`
 if (!fs.existsSync(dir)) {
