@@ -7,7 +7,7 @@
   },
   "version": "1.0.0",
   "author": "Andy Christianson",
-  "license": "ISC",
+  "license": "MIT",
   "scripts": {
     "start": "node index",
     "test-2015": "mocha 2015/test.js --timeout 30000",
