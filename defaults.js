@@ -5,7 +5,7 @@ try {
         .map(s => +s.match(/(\d+)/g)[0])
         .max()
 } catch (ex) {
-    day = 0
+    day = 1
 }
 try {
     part = _(fs.readdirSync(`${year}/day${day}`))

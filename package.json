@@ -12,7 +12,8 @@
     "start": "node index",
     "test-2015": "mocha 2015/test.js --timeout 30000",
     "test-2016": "mocha 2016/test.js --timeout 30000",
-    "test": "npm run test-2016",
+    "test-2017": "mocha 2017/test.js --timeout 30000",
+    "test": "npm run test-2017",
     "setup": "node setup"
   },
   "engines": {
