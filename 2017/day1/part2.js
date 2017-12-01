@@ -1,2 +1,2 @@
-module.exports = input => input.split``
-    .reduce((acc, val, index, arr) => acc + (arr[(index + (arr.length / 2)) % arr.length] === val ? +val : 0), 0)
+module.exports = input => 2 * input.split``
+    .reduce((acc, val, idx, arr) => acc + (arr.slice(arr.length / 2)[idx] === val ? +val : 0), 0)
