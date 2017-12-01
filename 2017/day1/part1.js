@@ -1,5 +1,3 @@
-module.exports = input => {
-    return input.match(/(.)\1+/g)
-        .map(i => +i[0] * (i.length - 1))
-        .reduce((a, v) => a + v, 0) + +input[0]
-}
+module.exports = input => input.match(/(.)\1+/g)
+    .map(m => +m[0] * (m.length - 1))
+    .reduce((acc, val) => acc + val) + (input[0] === input.slice(-1) ? +input[0] : 0)

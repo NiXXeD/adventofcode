@@ -1,10 +1,2 @@
-module.exports = input => {
-    let total = input.length
-    return input.split``
-        .map((value, index, array) => {
-            let i = (index + (total / 2)) % total
-            if (array[i] === value) return +value
-            return 0
-        })
-        .reduce((a, v) => a + v, 0)
-}
+module.exports = input => input.split``
+    .reduce((acc, val, index, arr) => acc + (arr[(index + (arr.length / 2)) % arr.length] === val ? +val : 0), 0)
