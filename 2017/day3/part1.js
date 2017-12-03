@@ -1,18 +1,10 @@
 module.exports = input => {
-    let m = 1, x = 0, y = 0, n
+    let m = 1, x = 0, n = 0
     do {
         m += 2
         x++
-        y++
-    } while (m * m < input)
+    } while ((n = m * m) < input)
 
-    n = m * m
-
-    // check if south side
-    if (n - m + 1 <= input) {
-        let diff = n - input
-        let dx = Math.abs(x - diff)
-        return dx + y
-    }
-    //TODO implement all sides
+    while (n - m + 1 > input) n -= m - 1
+    return Math.abs(x - (n - input)) + x
 }
