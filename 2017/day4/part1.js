@@ -1,7 +1,2 @@
-const _ = require('lodash')
-module.exports = input => {
-    return input.filter(pass => {
-        let split = pass.split` `
-        return _.uniq(split).length === split.length
-    }).length
-}
+module.exports = input => input.map(str => str.split` `)
+    .filter(words => words.filter((v, i, a) => a.indexOf(v) === i).length === words.length).length
