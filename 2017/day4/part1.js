@@ -1,2 +1,1 @@
-module.exports = input => input.map(str => str.split` `)
-    .filter(words => words.filter((v, i, a) => a.indexOf(v) === i).length === words.length).length
+module.exports = input => input.filter(str => !str.match(/(\b\S+\b).*\1/)).length
