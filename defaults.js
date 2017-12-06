@@ -1,3 +1,6 @@
+const _ = require('lodash')
+const fs = require('fs')
+
 let day, part, year = new Date().getFullYear()
 try {
     day = _(fs.readdirSync(`${year}`))

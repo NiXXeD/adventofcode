@@ -10,6 +10,8 @@ if (args.length === 2) {
     [year, day] = args
 } else if (args.length === 1) {
     [day] = args
+} else {
+    day++
 }
 
 //create things
