@@ -1,10 +1,11 @@
 module.exports = input => {
     let banks = input.split(/\s/).map(i => +i)
-    let cache = {}
-    let next = ''
-    let cycles = 0
+    let cache = {}, next = '', cycles = 0
 
-    const redestribute = () => {
+    while (!cache.hasOwnProperty(next)) {
+        cache[next] = cycles
+        cycles++
+
         let value = banks.reduce((a, v) => Math.max(a, v), 0)
         let index = banks.findIndex(v => v === value)
         banks[index] = 0
@@ -14,12 +15,7 @@ module.exports = input => {
             banks[index]++
             value--
         }
-    }
 
-    while (!cache.hasOwnProperty(next)) {
-        cache[next] = cycles
-        cycles++
-        redestribute()
         next = banks.reduce((a, v) => a + v, '')
     }
 
