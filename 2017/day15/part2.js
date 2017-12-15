@@ -1,7 +1,7 @@
 module.exports = input => {
     let count = 0, [a, b] = input.join``.match(/\d+/g).map(i => +i)
 
-    for (let i = 0; i < 5000000; i++) {
+    for (let i = 0; i < 5E6; i++) {
         do a = (a * 16807) % 2147483647
         while (a & 3)
 
