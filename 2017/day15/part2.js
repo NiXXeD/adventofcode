@@ -1,19 +1,14 @@
 module.exports = input => {
-    let [a, b] = input.join``.match(/\d+/g).map(i => +i)
-    let al = [], bl = [], count = 0, max = 5000000
+    let count = 0, [a, b] = input.join``.match(/\d+/g).map(i => +i)
 
-    while (al.length < max) {
-        a = (a * 16807) % 2147483647
-        if (a % 4 === 0) al.push(a)
-    }
+    for (let i = 0; i < 5000000; i++) {
+        do a = (a * 16807) % 2147483647
+        while (a & 3)
 
-    while (bl.length < max) {
-        b = (b * 48271) % 2147483647
-        if (b % 8 === 0) bl.push(b)
-    }
+        do b = (b * 48271) % 2147483647
+        while (b & 7)
 
-    for (let i = 0; i < al.length; i++) {
-        if ((al[i] & 0xFFFF) === (bl[i] & 0xFFFF)) count++
+        if ((a & 0xFFFF) === (b & 0xFFFF)) count++
     }
 
     return count

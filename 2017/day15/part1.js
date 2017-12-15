@@ -1,6 +1,5 @@
 module.exports = input => {
-    let [a, b] = input.join``.match(/\d+/g).map(i => +i)
-    let count = 0
+    let count = 0, [a, b] = input.join``.match(/\d+/g).map(i => +i)
 
     for (let i = 0; i < 40000000; i++) {
         a = (a * 16807) % 2147483647
