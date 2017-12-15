@@ -12,11 +12,8 @@ module.exports = input => {
         if (b % 8 === 0) bl.push(b)
     }
 
-    al = al.map(i => i.toString(2).slice(-16))
-    bl = bl.map(i => i.toString(2).slice(-16))
-
     for (let i = 0; i < al.length; i++) {
-        if (al[i] === bl[i]) count++
+        if ((al[i] & 0xFFFF) === (bl[i] & 0xFFFF)) count++
     }
 
     return count

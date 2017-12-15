@@ -6,7 +6,7 @@ module.exports = input => {
         a = (a * 16807) % 2147483647
         b = (b * 48271) % 2147483647
 
-        if (a.toString(2).slice(-16) === b.toString(2).slice(-16)) count++
+        if ((a & 0xFFFF) === (b & 0xFFFF)) count++
     }
 
     return count
