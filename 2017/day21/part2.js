@@ -1,3 +1,1 @@
-module.exports = input => {
-    return input
-}
+module.exports = input => require('./part1')(input, 18)
