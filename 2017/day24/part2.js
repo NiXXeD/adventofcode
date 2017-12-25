@@ -13,7 +13,7 @@ module.exports = input => {
                 strength: strength + comp.a + comp.b
             })))
         } else {
-            if (longest.length <= used.length) {
+            if (used.length > longest.length || (used.length === longest.length && strength > longest.strength)) {
                 longest = {strength, length: used.length}
             }
         }
