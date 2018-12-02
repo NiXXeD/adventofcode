@@ -1,3 +1,1 @@
-module.exports = input => {
-    return eval('0' + input.join` `)
-}
+module.exports = input => eval(input.join``)

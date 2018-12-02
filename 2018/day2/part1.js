@@ -1,23 +1,5 @@
-module.exports = input => {
-    let two = 0
-    let three = 0
-    input
-        .forEach(word => {
-            let wordTwo = false
-            let wordThree = false
-            while (word.length) {
-                let letter = word[0]
-                let rex = new RegExp(letter, 'g')
-                let count = word.match(rex).length
-                if (count === 2 && !wordTwo) {
-                    two++
-                    wordTwo = true
-                } else if (count === 3 && !wordThree) {
-                    three++
-                    wordThree = true
-                }
-                word = word.replace(rex, '')
-            }
-        })
-    return two * three
-}
+module.exports = input => input
+    .map(word => word.split``.sort().join``)
+    .map(word => ([!!word.match(/(.)\1/), !!word.match(/(.)\1\1/)]))
+    .reduce(([a, b], [c, d]) => [a + c, b + d], [0, 0])
+    .reduce((acc, val) => acc * val, 1)
