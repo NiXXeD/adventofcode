@@ -1,5 +1,4 @@
 const _ = require('lodash')
-const fs = require('fs')
 let {day, part, year} = require('./defaults')
 
 //process input args

@@ -1,7 +1,10 @@
 const _ = require('lodash')
 const fs = require('fs')
 
-let day, part, year = new Date().getFullYear()
+let year = new Date().getFullYear()
+if (new Date().getMonth() < 11) year--
+
+let day, part
 try {
     day = _(fs.readdirSync(`${year}`))
         .filter(s => /^day/.test(s))
