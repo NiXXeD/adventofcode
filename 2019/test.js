@@ -4,7 +4,7 @@ describe('advent of code 2019', () => {
     const run = require('../run')
 
     function test(day, part, expected) {
-        const actual = run(2018, day, part, false)
+        const actual = run(2019, day, part, false)
         return assert.equal(expected, actual)
     }
 
