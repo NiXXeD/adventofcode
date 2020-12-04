@@ -14,4 +14,6 @@ describe('advent of code 2020', () => {
     it('day 02, part 2', () => test(2, 2, 342))
     it('day 03, part 1', () => test(3, 1, 181))
     it('day 03, part 2', () => test(3, 2, 1260601650))
+    it('day 04, part 1', () => test(4, 1, 239))
+    it('day 04, part 2', () => test(4, 2, 188))
 })
