@@ -24,7 +24,7 @@ if (!fs.existsSync(dir)) {
     //directories
     console.log(`Creating directories for ${year}.${day}...`)
     fs.mkdirSync(dir)
-    fs.writeFileSync(`${dir}/input`, 12345)
+    fs.writeFileSync(`${dir}/input`, '12345')
 
     //code
     console.log(`Creating code for parts 1 and 2...`)
