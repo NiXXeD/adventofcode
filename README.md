@@ -4,8 +4,6 @@ Solving http://adventofcode.com puzzles
 I'm mostly doing [code golf](https://en.wikipedia.org/wiki/Code_golf) with these solutions, so they will seem very terse.
 No, I don't code like this at work.
 
-Using Node v6 for ES6 syntax and features.
-
 To run one day/part
 ---
 ```
